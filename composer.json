@@ -1,0 +1,42 @@
+{
+    "name": "pmatseykanets/marketo-client",
+    "description": "Marketo REST API Client",
+    "keywords": ["marketo", "REST", "API", "client"],
+    "homepage": "https://github.com/pmatseykanets/marketo-client-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Matseykanets",
+            "email": "pmatseykanets@gmail.com",
+            "homepage": "https://github.com/pmatseykanets"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarketoClient\\": "src"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarketoClient\\MarketoServiceProvider"
+            ]
+        }
+    }
+}
