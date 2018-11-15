@@ -3,9 +3,12 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/pmatseykanets/marketo-client-php/master.svg?style=flat-square)](https://travis-ci.org/pmatseykanets/marketo-client-php)
 
+It's work in progress. Use at your own risk.
+
 ## Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Marketo REST API Coverage](#marketo-rest-api-coverage)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
 - [Credits](#credits)
@@ -58,6 +61,77 @@ Alternatively the client can read parameters from the following environment vari
 $marketo = new Client();
 ```
 
+## Marketo REST API Coverage
+
+- [ ] LeadDatabase
+  - [ ] Activities
+    - [x] GetActivities
+    - [x] GetActivityTypes
+    - [x] GetDeletedActivities
+    - [x] GetLeadChangesActivities
+    - [x] GetPagingToken
+    - [ ] AddCustomActivities
+    - [ ] CreateCustomActivityType
+    - [ ] DeleteCustomActivityType
+    - [ ] DiscardCustomActivityTypeDraft
+    - [ ] UpdateCustomActivityType
+    - [ ] ApproveCustomActivityType
+    - [ ] CreateCustomActivityTypeAttributes
+    - [ ] DeleteCustomActivityTypeAttributes
+    - [ ] UpdateCustomActivityTypeAttributes
+  - [ ] BulkCustomObjects
+  - [ ] BulkExportActivities
+  - [ ] BulkExportLeads
+  - [ ] BulkLeads
+  - [ ] Campaigns
+  - [ ] Companies
+  - [ ] CustomObjects
+  - [ ] Leads
+    - [x] AssociateLead
+    - [x] DeleteLeads
+    - [x] DescribeLead
+    - [x] GetLeadPartitions
+    - [x] GetLeads
+    - [x] MergeLeads
+    - [x] PushLeads
+    - [x] SyncLeads
+    - [x] UpdateLeadPartition
+    - [ ] GetLeadsByProgramId
+    - [ ] ChangeLeadProgramStatus
+  - [x] Lists
+    - [x] AddToList
+    - [x] DeleteFromList
+    - [x] FindList
+    - [x] GetListLeads
+    - [x] GetLists
+    - [x] IsListMember
+  - [ ] NamedAccountLists
+  - [ ] NamedAccounts
+  - [ ] Opportunities
+  - [ ] SalesPersons
+  - [ ] Usage
+- [ ] Assets
+  - [ ] Channels
+  - [ ] EmailTemplates
+  - [ ] Emails
+  - [ ] FileContents
+  - [ ] Files
+  - [ ] Folders
+  - [ ] FormFields
+  - [ ] Forms
+  - [ ] LandingPageContent
+  - [ ] LandingPageTemplates
+  - [ ] LandingPages
+  - [ ] Programs
+  - [ ] Segments
+  - [ ] SmartCampaigns
+  - [ ] SmartLists
+  - [ ] StaticLists
+  - [ ] Tags
+  - [ ] Tokens
+- [x] Identity
+  - [x] GetOAuthToken
+    
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information about what has changed recently.
