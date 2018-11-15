@@ -33,7 +33,7 @@ When instantiating a client you can pass an array of following parameters
 
 ```php
 $config = [
-    // required
+    // required (credentials below are not real)
     'client_id' => '02d92ff0-9d94-4de7-b152-3df68969b947',
     'client_secret' => 'bB6wmEvjlsfVr1Vs3NfGwSD9HL2AAHzZ',
     'url' => 'https://123-XYZ-456.mktorest.com'
