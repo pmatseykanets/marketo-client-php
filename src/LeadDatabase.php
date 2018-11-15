@@ -13,9 +13,9 @@ use MarketoClient\LeadDatabase\Leads\MergeLeads;
 use MarketoClient\LeadDatabase\Leads\DeleteLeads;
 use MarketoClient\LeadDatabase\Lists\GetListLeads;
 use MarketoClient\LeadDatabase\Leads\DescribeLead;
+use MarketoClient\LeadDatabase\Lists\IsListMember;
 use MarketoClient\LeadDatabase\Leads\AssociateLead;
 use MarketoClient\LeadDatabase\Lists\DeleteFromList;
-use MarketoClient\LeadDatabase\Lists\IsMemberOfList;
 use MarketoClient\LeadDatabase\Leads\GetLeadPartitions;
 use MarketoClient\LeadDatabase\Activities\GetActivities;
 use MarketoClient\LeadDatabase\Activities\GetPagingToken;
@@ -129,8 +129,8 @@ class LeadDatabase extends Resource
         return new GetLists($this->client);
     }
 
-    public function isMemberOfList()
+    public function isListMember()
     {
-        return new IsMemberOfList($this->client);
+        return new IsListMember($this->client);
     }
 }

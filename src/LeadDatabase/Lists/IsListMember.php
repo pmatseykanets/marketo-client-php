@@ -12,7 +12,7 @@ use MarketoClient\Endpoint;
  * @property int $listId
  * @property array $leadIds
  */
-class IsMemberOfList extends Endpoint
+class IsListMember extends Endpoint
 {
     protected $uri = '/rest/v1/lists';
 
