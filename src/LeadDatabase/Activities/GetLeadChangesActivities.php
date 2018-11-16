@@ -26,9 +26,9 @@ class GetLeadChangesActivities extends Endpoint
 
     public function send()
     {
-        if ($this->nextPageToken === null && $this->since !== null) {
+        if ($this->nextPageToken === null && $this->sinceDateTime !== null) {
             $pagingToken = GetPagingToken::new($this->client())
-                ->since($this->since)
+                ->sinceDateTime($this->sinceDateTime)
                 ->send()
                 ->nextPageToken;
 
