@@ -84,6 +84,8 @@ $marketo = new Client();
   - [ ] BulkExportLeads
   - [ ] BulkLeads
   - [ ] Campaigns
+    - [x] FindCampaign
+    - [x] GetCampaigns
   - [ ] Companies
   - [ ] CustomObjects
   - [ ] Leads
