@@ -17,9 +17,11 @@ use MarketoClient\LeadDatabase\Lists\IsListMember;
 use MarketoClient\LeadDatabase\Leads\AssociateLead;
 use MarketoClient\LeadDatabase\Lists\DeleteFromList;
 use MarketoClient\LeadDatabase\Campaigns\GetCampaigns;
+use MarketoClient\LeadDatabase\Companies\GetCompanies;
 use MarketoClient\LeadDatabase\Campaigns\FindCampaign;
 use MarketoClient\LeadDatabase\Leads\GetLeadPartitions;
 use MarketoClient\LeadDatabase\Activities\GetActivities;
+use MarketoClient\LeadDatabase\Companies\DescribeCompany;
 use MarketoClient\LeadDatabase\Activities\GetPagingToken;
 use MarketoClient\LeadDatabase\Leads\UpdateLeadPartition;
 use MarketoClient\LeadDatabase\Activities\GetActivityTypes;
@@ -63,6 +65,17 @@ class LeadDatabase extends Resource
     public function findCampaign()
     {
         return new FindCampaign($this->client);
+    }
+
+    // Companies
+    public function getCompanies()
+    {
+        return new GetCompanies($this->client);
+    }
+
+    public function describeCompany()
+    {
+        return new DescribeCompany($this->client);
     }
 
     // Leads

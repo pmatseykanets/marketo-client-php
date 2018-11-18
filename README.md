@@ -89,6 +89,10 @@ $marketo = new Client();
     - [ ] ScheduleCampaign
     - [ ] TriggerCampaign
   - [ ] Companies
+    - [x] DescribeCompany
+    - [x] GetCompanies
+    - [ ] SyncCompanies
+    - [ ] DeleteCompanies
   - [ ] CustomObjects
   - [ ] Leads
     - [x] AssociateLead
