@@ -34,7 +34,17 @@ class Response
 
     public function hasMorePages()
     {
-        return (string) $this->nextPageToken !== '' && $this->moreResult === true;
+        $morePages = (string) $this->nextPageToken !== '';
+
+        if (isset($this->moreResult)) {
+            if ($this->moreResult === true) {
+                return $morePages;
+            }
+
+            return false;
+        }
+
+        return $morePages;
     }
 
     public function response()
