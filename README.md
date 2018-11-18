@@ -42,14 +42,7 @@ $config = [
 ];
 
 $marketo = new Client($config);
-
-foreach ($marketo->leadDatabase()->getLists()->send() as $response) {
-    foreach ($response->result as $list) {
-        echo $list->name.PHP_EOL;
-    }
-}
 ```
-
 Alternatively the client can read parameters from the following environment variables
 
 - `MARKETO_CLIENT_ID` 
@@ -59,6 +52,18 @@ Alternatively the client can read parameters from the following environment vari
 
 ```php
 $marketo = new Client();
+```
+
+Endpoints that may have multiple pages of results return [generators](https://secure.php.net/manual/en/language.generators.overview.php) 
+so they can be easily iterated over
+
+```php
+$request = $marketo->leadDatabase()->getLists(); 
+foreach ($request->send() as $response) {
+    foreach ($response->result ?? [] as $list) {
+        // do something with a list
+    }
+}
 ```
 
 ## Marketo REST API Coverage
