@@ -48,7 +48,7 @@ class GetLeadChangesActivities extends Endpoint
             $this->nextPageToken($response->nextPageToken);
 
             yield $response;
-        } while (isset($response->nextPageToken));
+        } while ($response->hasMorePages());
     }
 
     public function sinceDateTime($value)

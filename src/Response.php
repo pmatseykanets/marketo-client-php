@@ -32,6 +32,11 @@ class Response
         $this->response = $response;
     }
 
+    public function hasMorePages()
+    {
+        return (string) $this->nextPageToken !== '' && $this->moreResult === true;
+    }
+
     public function response()
     {
         return $this->response;
