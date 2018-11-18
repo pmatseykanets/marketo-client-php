@@ -19,6 +19,8 @@ class GetLeads extends Endpoint
 {
     protected $uri = '/rest/v1/leads';
 
+    protected $listable = ['filterValues', 'fields'];
+
     protected $required = ['filterType', 'filterValues'];
 
     public function send()
