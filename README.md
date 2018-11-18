@@ -86,6 +86,8 @@ $marketo = new Client();
   - [ ] Campaigns
     - [x] FindCampaign
     - [x] GetCampaigns
+    - [ ] ScheduleCampaign
+    - [ ] TriggerCampaign
   - [ ] Companies
   - [ ] CustomObjects
   - [ ] Leads
