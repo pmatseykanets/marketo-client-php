@@ -98,7 +98,12 @@ foreach ($request->send() as $response) {
     - [x] GetCompanies
     - [ ] SyncCompanies
     - [ ] DeleteCompanies
-  - [ ] CustomObjects
+  - [x] CustomObjects
+    - [x] DeleteCustomObjects
+    - [x] DescribeCustomObject
+    - [x] GetCustomObjects
+    - [x] GetCustomObjectTypes
+    - [x] SyncCustomObjects
   - [ ] Leads
     - [x] AssociateLead
     - [x] DeleteLeads

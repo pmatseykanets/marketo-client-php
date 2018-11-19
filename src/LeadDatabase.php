@@ -25,6 +25,11 @@ use MarketoClient\LeadDatabase\Companies\DescribeCompany;
 use MarketoClient\LeadDatabase\Activities\GetPagingToken;
 use MarketoClient\LeadDatabase\Leads\UpdateLeadPartition;
 use MarketoClient\LeadDatabase\Activities\GetActivityTypes;
+use MarketoClient\LeadDatabase\CustomObjects\GetCustomObjects;
+use MarketoClient\LeadDatabase\CustomObjects\SyncCustomObjects;
+use MarketoClient\LeadDatabase\CustomObjects\DeleteCustomObjects;
+use MarketoClient\LeadDatabase\CustomObjects\DescribeCustomObject;
+use MarketoClient\LeadDatabase\CustomObjects\GetCustomObjectTypes;
 use MarketoClient\LeadDatabase\Activities\GetDeletedLeadActivities;
 use MarketoClient\LeadDatabase\Activities\GetLeadChangesActivities;
 
@@ -76,6 +81,32 @@ class LeadDatabase extends Resource
     public function describeCompany()
     {
         return new DescribeCompany($this->client);
+    }
+
+    // CustomObjects
+    public function deleteCustomObjects()
+    {
+        return new DeleteCustomObjects($this->client);
+    }
+
+    public function describeCustomObject()
+    {
+        return new DescribeCustomObject($this->client);
+    }
+
+    public function getCustomObjects()
+    {
+        return new GetCustomObjects($this->client);
+    }
+
+    public function getCustomObjectTypes()
+    {
+        return new GetCustomObjectTypes($this->client);
+    }
+
+    public function syncCustomObjects()
+    {
+        return new SyncCustomObjects($this->client);
     }
 
     // Leads
