@@ -23,13 +23,19 @@ class MergeLeads extends Endpoint
     {
         $this->checkRequired();
 
-        $request = Request::post($this->url("/$this->leadId/merge.json"))
+        $request = Request::post($this->url("/{$this->leadId}/merge.json"))
             ->withHeaders($this->client->baseHeaders())
-            ->withQueryValue($this->query());
+            ->withHeader('content-type', 'application/json')
+            ->withQuery($this->query());
 
         $response = $this->client->sendWithRetry($request);
 
         return $response;
+    }
+
+    public function leadId($value)
+    {
+        return $this->set(__FUNCTION__, $value);
     }
 
     public function leadIds($value)
